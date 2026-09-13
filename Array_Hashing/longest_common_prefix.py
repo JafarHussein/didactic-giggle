@@ -25,7 +25,17 @@
 
 class Solution:
     def longestCommonPrefix(self, strs):
-        pass
+        common_prefix=""
+        comparison_string=strs[0]
+        for i in range(0, len(comparison_string)):
+            for j in range(1, len(strs)):
+                if comparison_string[i] != strs[j][i]:
+                    return common_prefix
+            common_prefix+=comparison_string[i]
+
+        return common_prefix
+
+    
 
 
 
